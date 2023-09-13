@@ -33,15 +33,15 @@
             exitMenuItem = new ToolStripMenuItem();
             helpToolItem = new ToolStripMenuItem();
             aboutMenuItem = new ToolStripMenuItem();
-            loadDataButton = new Button();
             addItemButton = new Button();
             itemListView = new ListView();
-            removeItemButton = new Button();
-            markCompleteButton = new Button();
-            editItemButton = new Button();
             taskColumnHeader = new ColumnHeader();
             dueDateColumnHeader = new ColumnHeader();
             statusColumnHeader = new ColumnHeader();
+            removeItemButton = new Button();
+            markCompleteButton = new Button();
+            editItemButton = new Button();
+            headerLabel = new Label();
             menuStrip.SuspendLayout();
             SuspendLayout();
             // 
@@ -82,23 +82,12 @@
             aboutMenuItem.Size = new Size(107, 22);
             aboutMenuItem.Text = "&About";
             // 
-            // loadDataButton
-            // 
-            loadDataButton.BackColor = Color.Transparent;
-            loadDataButton.Location = new Point(26, 36);
-            loadDataButton.Margin = new Padding(2);
-            loadDataButton.Name = "loadDataButton";
-            loadDataButton.Size = new Size(93, 31);
-            loadDataButton.TabIndex = 1;
-            loadDataButton.Text = "Load Data";
-            loadDataButton.UseVisualStyleBackColor = false;
-            // 
             // addItemButton
             // 
-            addItemButton.Location = new Point(123, 36);
+            addItemButton.Location = new Point(555, 246);
             addItemButton.Margin = new Padding(2);
             addItemButton.Name = "addItemButton";
-            addItemButton.Size = new Size(93, 31);
+            addItemButton.Size = new Size(93, 54);
             addItemButton.TabIndex = 2;
             addItemButton.Text = "Add Item";
             addItemButton.UseVisualStyleBackColor = true;
@@ -112,6 +101,18 @@
             itemListView.Size = new Size(524, 338);
             itemListView.TabIndex = 3;
             itemListView.UseCompatibleStateImageBehavior = false;
+            // 
+            // taskColumnHeader
+            // 
+            taskColumnHeader.Text = "Task";
+            // 
+            // dueDateColumnHeader
+            // 
+            dueDateColumnHeader.Text = "Due Date";
+            // 
+            // statusColumnHeader
+            // 
+            statusColumnHeader.Text = "Status";
             // 
             // removeItemButton
             // 
@@ -143,17 +144,15 @@
             editItemButton.Text = "Edit Item";
             editItemButton.UseVisualStyleBackColor = true;
             // 
-            // taskColumnHeader
+            // headerLabel
             // 
-            taskColumnHeader.Text = "Task";
-            // 
-            // dueDateColumnHeader
-            // 
-            dueDateColumnHeader.Text = "Due Date";
-            // 
-            // statusColumnHeader
-            // 
-            statusColumnHeader.Text = "Status";
+            headerLabel.AutoSize = true;
+            headerLabel.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            headerLabel.Location = new Point(26, 24);
+            headerLabel.Name = "headerLabel";
+            headerLabel.Size = new Size(181, 30);
+            headerLabel.TabIndex = 7;
+            headerLabel.Text = "Get It Done Tom!";
             // 
             // MainForm
             // 
@@ -161,12 +160,12 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaption;
             ClientSize = new Size(659, 437);
+            Controls.Add(headerLabel);
             Controls.Add(editItemButton);
             Controls.Add(markCompleteButton);
             Controls.Add(removeItemButton);
             Controls.Add(itemListView);
             Controls.Add(addItemButton);
-            Controls.Add(loadDataButton);
             Controls.Add(menuStrip);
             Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
             MainMenuStrip = menuStrip;
@@ -186,7 +185,6 @@
         private ToolStripMenuItem exitMenuItem;
         private ToolStripMenuItem helpToolItem;
         private ToolStripMenuItem aboutMenuItem;
-        private Button loadDataButton;
         private Button addItemButton;
         private ListView itemListView;
         private Button removeItemButton;
@@ -195,5 +193,6 @@
         private ColumnHeader taskColumnHeader;
         private ColumnHeader dueDateColumnHeader;
         private ColumnHeader statusColumnHeader;
+        private Label headerLabel;
     }
 }

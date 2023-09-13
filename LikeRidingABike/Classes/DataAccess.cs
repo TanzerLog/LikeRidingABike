@@ -4,28 +4,49 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SQLite;
+using System.Data;
 
 namespace LikeRidingABike.Classes
 {
     public class DataAccess
     {
         private string connectionString;
+        private SQLiteConnection connection;
 
         public DataAccess(string connectionString)
         {
             this.connectionString = connectionString;
+            connection = new SQLiteConnection(connectionString);
         }
 
         public void OpenConnection()
         {
-            // Open the SQLite connection here
+            try
+            {
+                if (connection.State != System.Data.ConnectionState.Open)
+                {
+                    connection.Open();
+                }
+            }
+            catch (Exception e)
+            {
+                throw new Exception("Error opening the database connection: " + e.Message);
+            }
         }
 
         public void CloseConnection()
         {
-            // Close the SQLite connection here
+            try
+            {
+                if (connection.State != ConnectionState.Closed)
+                {
+                    connection.Close();
+                }
+            }
+            catch (Exception e)
+            {
+                throw new Exception("Error closing the database connection: " + e.Message);
+            }
         }
-
-        // Other methods for executing SQL commands and managing data
     }
 }
