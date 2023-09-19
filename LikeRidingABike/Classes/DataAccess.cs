@@ -23,7 +23,7 @@ namespace LikeRidingABike.Classes
         {
             try
             {
-                if (connection.State != System.Data.ConnectionState.Open)
+                if (connection.State != ConnectionState.Open)
                 {
                     connection.Open();
                 }

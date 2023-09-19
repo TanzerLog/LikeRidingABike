@@ -84,7 +84,7 @@
             // 
             // addItemButton
             // 
-            addItemButton.Location = new Point(555, 246);
+            addItemButton.Location = new Point(555, 130);
             addItemButton.Margin = new Padding(2);
             addItemButton.Name = "addItemButton";
             addItemButton.Size = new Size(93, 54);
@@ -116,7 +116,7 @@
             // 
             // removeItemButton
             // 
-            removeItemButton.Location = new Point(555, 188);
+            removeItemButton.Location = new Point(555, 246);
             removeItemButton.Margin = new Padding(2);
             removeItemButton.Name = "removeItemButton";
             removeItemButton.Size = new Size(93, 54);
@@ -136,7 +136,7 @@
             // 
             // editItemButton
             // 
-            editItemButton.Location = new Point(555, 130);
+            editItemButton.Location = new Point(555, 188);
             editItemButton.Margin = new Padding(2);
             editItemButton.Name = "editItemButton";
             editItemButton.Size = new Size(93, 54);
@@ -148,7 +148,7 @@
             // 
             headerLabel.AutoSize = true;
             headerLabel.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
-            headerLabel.Location = new Point(26, 24);
+            headerLabel.Location = new Point(26, 39);
             headerLabel.Name = "headerLabel";
             headerLabel.Size = new Size(181, 30);
             headerLabel.TabIndex = 7;
